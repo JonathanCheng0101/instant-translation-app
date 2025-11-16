@@ -209,6 +209,11 @@ async def translate_text(text, to_lang):
 # ====================================================
 # WebSocket 主邏輯
 # ====================================================
+
+@app.get("/")
+def home():
+    return {"message": "backend is running"}
+
 @app.websocket("/ws_stream")
 async def ws(websocket: WebSocket):
     await websocket.accept()

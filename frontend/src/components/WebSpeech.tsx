@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-const WS_URL = "wss://instant-translation-app.onrender.com/ws_stream";
+const WS_URL = "wss://instant-translation-backend-c4fpb7arc0f8d5cv.eastus-01.azurewebsites.net/ws_stream";
 
 export default function InstantTranslation() {
   const [log, setLog] = useState<string>("(Transcriptions will appear here)");

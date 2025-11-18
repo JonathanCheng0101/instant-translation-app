@@ -229,7 +229,7 @@ async def ws(websocket: WebSocket):
     speech_config.enable_dictation()
 
     # 預設語言（第 4 slot 等 Whisper detect 來改）
-    default_auto = ["ko-KR", "en-US", "ja-JP", "zh-CN"]
+    default_auto = ["ko-KR", "en-US", "ja-JP", "zh-TW"]
 
     auto_lang = speechsdk.languageconfig.AutoDetectSourceLanguageConfig(
         languages=default_auto

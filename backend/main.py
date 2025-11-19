@@ -265,7 +265,7 @@ async def ws(websocket: WebSocket):
         logger.info(f"🔄 Azure 切換語言 → {azure_lang}")
 
         auto_lang = speechsdk.languageconfig.AutoDetectSourceLanguageConfig(
-            languages=["zh-TW", "en-US", "es-ES", azure_lang]
+            languages=["zh-TW", "ko-KR", "es-ES", azure_lang]
         )
 
         try:

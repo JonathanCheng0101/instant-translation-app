@@ -229,7 +229,7 @@ async def ws(websocket: WebSocket):
     speech_config.enable_dictation()
 
     # 預設語言（第 4 slot 等 Whisper detect 來改）
-    default_auto = ["ko-KR", "en-US", "ja-JP", "zh-TW"]
+    default_auto = ["zh-TW", "en-US", "es-ES", "zh-TW"]
 
     auto_lang = speechsdk.languageconfig.AutoDetectSourceLanguageConfig(
         languages=default_auto
@@ -265,7 +265,7 @@ async def ws(websocket: WebSocket):
         logger.info(f"🔄 Azure 切換語言 → {azure_lang}")
 
         auto_lang = speechsdk.languageconfig.AutoDetectSourceLanguageConfig(
-            languages=["zh-TW", "en-US", "ja-JP", azure_lang]
+            languages=["zh-TW", "en-US", "es-ES", azure_lang]
         )
 
         try:

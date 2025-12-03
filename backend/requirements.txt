@@ -5,3 +5,4 @@ azure-cognitiveservices-speech
 aiohttp
 python-dotenv
 requests
+gunicorn 
